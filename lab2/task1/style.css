@@ -1,0 +1,9 @@
+.selected {
+    background-color: yellow;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}

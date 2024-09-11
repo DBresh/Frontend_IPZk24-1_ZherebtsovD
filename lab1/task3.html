@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            ul {
+                list-style: none;
+                padding-left: 20px;
+                margin: 0;
+            }
+
+            details {
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+
+            summary {
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            summary::marker {
+                font-size: 1.2em;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            details[open] {
+                border-left: 4px solid blue;
+            }
+
+            details[open] > ul > details[open] {
+                border-color: orange;
+            }
+
+            details[open] > ul > details[open] > ul > details[open] {
+                border-color: green;
+            }
+
+            details > ul {
+                padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <details>
+                <summary>Рівень 1, Елемент 1</summary>
+                <ul>
+                    <details>
+                        <summary>Рівень 2, Елемент 1</summary>
+                        <ul>
+                            <li><em>Рівень 3, Елемент 1</em></li>
+                            <li><em>Рівень 3, Елемент 2</em></li>
+                            <details>
+                                <summary>Рівень 3, Елемент 1</summary>
+                                <ul>
+                                    <li><em>Рівень 4, Елемент 1</em></li>
+                                    <li><em>Рівень 4, Елемент 2</em></li>
+                                </ul>
+                            </details>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Рівень 2, Елемент 2</summary>
+                        <ul>
+                            <li><em>Рівень 3, Елемент 3</em></li>
+                            <li><em>Рівень 3, Елемент 4</em></li>
+                        </ul>
+                    </details>
+                </ul>
+            </details>
+        </ul>
+
+        <ul>
+            <details>
+                <summary>Рівень 1, Елемент 1</summary>
+                <ul>
+                    <details>
+                        <summary>Рівень 2, Елемент 1</summary>
+                        <ul>
+                            <li><em>Рівень 3, Елемент 1</em></li>
+                            <li><em>Рівень 3, Елемент 2</em></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Рівень 2, Елемент 2</summary>
+                        <ul>
+                            <li><em>Рівень 3, Елемент 3</em></li>
+                            <li><em>Рівень 3, Елемент 4</em></li>
+                        </ul>
+                    </details>
+                </ul>
+            </details>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            label {
+                display: block;
+                padding: 10px;
+                background-color: #bbb;
+                /* background-color: #ccc; */
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            label:hover {
+                background-color: #717171;
+                /* background-color: gray; */
+
+            }
+
+            div > div {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            input[type="radio"]:checked + label + div {
+                max-height: 200px;
+            }
+
+            div > div p {
+                padding: 10px;
+                background-color: rgb(231, 231, 231);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="radio" name="accordion" id="section1" />
+            <label for="section1">Section 1</label>
+            <div>
+                <p>Content of Section 1</p>
+                <p>Content of Section 1</p>
+                <p>Content of Section 1</p>
+            </div>
+
+            <input type="radio" name="accordion" id="section2" />
+            <label for="section2">Section 2</label>
+            <div>
+                <p>Content of Section 2</p>
+                <p>Content of Section 2</p>
+                <p>Content of Section 2</p>
+            </div>
+
+            <input type="radio" name="accordion" id="section3" />
+            <label for="section3">Section 3</label>
+            <div>
+                <p>Content of Section 3</p>
+                <p>Content of Section 3</p>
+                <p>Content of Section 3</p>
+            </div>
+        </div>
+    </body>
+</html>
